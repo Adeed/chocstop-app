@@ -1,0 +1,76 @@
+import { TimingModel } from '../../models/TimingModel';
+
+export const Timings: TimingModel[] = [
+    {
+        "id": 1,
+        "shopName": "Choc Stop Diner",
+        "openTiming": [
+             "Monday : 12:00-24:00" ,
+             "Tuesday : 12:00-24:00" ,
+             "Wednesday : 12:00-24:00" ,
+             "Thursday : 12:00-24:00" ,
+             "Friday : 12:00-24:00" ,
+             "Saturday : 12:00-24:00" ,
+             "Sunday : 12:00-24:00" ,
+        ],
+        "deliveryTiming": [
+            "Monday : 17:00-24:00" ,
+            "Tuesday : 17:00-24:00" ,
+            "Wednesday : 17:00-24:00" ,
+            "Thursday : 17:00-24:00" ,
+            "Friday : 17:00-24:00" ,
+            "Saturday : 17:00-24:00" ,
+            "Sunday : 17:00-24:00" ,
+        ],
+        "description": "First shop",
+        "image": "assets/img/slide_2.jpg",
+    },
+    {
+        "id": 2,
+        "shopName": "Choc Stop Cafe",
+        "openTiming": [
+            "Monday : 12:00-24:00" ,
+             "Tuesday : 12:00-24:00" ,
+             "Wednesday : 12:00-24:00" ,
+             "Thursday : 12:00-24:00" ,
+             "Friday : 12:00-24:00" ,
+             "Saturday : 12:00-24:00" ,
+             "Sunday : 12:00-24:00" ,
+        ],
+        "deliveryTiming": [
+            "Monday : 17:00-24:00" ,
+            "Tuesday : 17:00-24:00" ,
+            "Wednesday : 17:00-24:00" ,
+            "Thursday : 17:00-24:00" ,
+            "Friday : 17:00-24:00" ,
+            "Saturday : 17:00-24:00" ,
+            "Sunday : 17:00-24:00" ,
+        ],
+        "description": "Second shop",
+        "image": "assets/img/slide_2.jpg",
+    },
+    {
+        "id": 3,
+        "shopName": "Choc Stop Sweet Shop",
+        "openTiming": [
+            "Monday : 12:00-24:00" ,
+             "Tuesday : 12:00-24:00" ,
+             "Wednesday : 12:00-24:00" ,
+             "Thursday : 12:00-24:00" ,
+             "Friday : 12:00-24:00" ,
+             "Saturday : 12:00-24:00" ,
+             "Sunday : 12:00-24:00" ,
+        ],
+        "deliveryTiming": [
+            "Monday : 17:00-24:00" ,
+            "Tuesday : 17:00-24:00" ,
+            "Wednesday : 17:00-24:00" ,
+            "Thursday : 17:00-24:00" ,
+            "Friday : 17:00-24:00" ,
+            "Saturday : 17:00-24:00" ,
+            "Sunday : 17:00-24:00" ,
+        ],
+        "description": "Third shop",
+        "image": "assets/img/slide_2.jpg",
+    }
+]

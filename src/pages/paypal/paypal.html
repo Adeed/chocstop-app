@@ -1,0 +1,21 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>Payment</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<form name="paymentForm">
+		<ion-item>
+			<ion-label floating>Amount</ion-label>
+			<ion-input type="number" id="amount" name="amount" [(ngModel)]="cartDetails"></ion-input>
+		</ion-item>
+		
+		<p>
+			<button ion-button block color="primary" (click)="pay()">MAKE PAYMENT</button>
+		</p>
+</form>
+</ion-content>

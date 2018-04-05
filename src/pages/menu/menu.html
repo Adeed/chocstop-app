@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Menu</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="cartPage()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="card-background-page">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <ion-card>
+          <img src="assets/img/card-saopaolo.png" />
+          <div class="card-title">São Paulo</div>
+          <div class="card-subtitle">41 Listings</div>
+        </ion-card>
+      </ion-col>
+      <ion-col width-50>
+        <ion-card>
+          <img src="assets/img/card-amsterdam.png" />
+          <div class="card-title">Amsterdam</div>
+          <div class="card-subtitle">64 Listings</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngFor="let c of category; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
+    <h2 ion-item>{{c.title}}
+      <ion-icon item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+    </h2>
+
+    <div *ngIf="isGroupShown(i)">
+      <ion-card *ngFor="let item of menuitems">
+        <div *ngIf="item.category === c.title">
+          <button ion-item (click)="itemTapped($event, item)">
+            <ion-avatar item-left>
+              <img style="width: 80px; height: 80px;" [src]="item.image">
+            </ion-avatar>
+            <h2>{{ item.name }}</h2>
+            <p>Price: (£{{ item.price }} )</p>
+            <ion-icon name="arrow" item-right></ion-icon>
+          </button>
+        </div>
+      </ion-card>
+    </div>
+  </ion-card>
+
+</ion-content>

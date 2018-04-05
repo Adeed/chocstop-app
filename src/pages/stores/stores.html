@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Stores</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="cartPage()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngFor="let timing of openTimings">
+    <ion-card-content>
+      <img item-center style="width:100; height: 100;" [src]="timing?.image">
+      <ion-card-title>{{timing.shopName}}</ion-card-title>
+
+      <h2>{{timing.description}}</h2>
+      <ion-list-header>
+        Shop Opening Timing
+      </ion-list-header>
+      <ion-list *ngFor="let opentiming of timing.openTiming">
+        <ion-item>{{opentiming}}</ion-item>
+      </ion-list>
+      <ion-item-divider color="light"></ion-item-divider>
+      <ion-list-header>
+        Delivery Timing
+      </ion-list-header>
+      <ion-list *ngFor="let deliverytiming of timing.deliveryTiming">
+        <ion-item>{{deliverytiming}}</ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

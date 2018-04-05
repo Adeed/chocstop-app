@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="item"></ion-icon>
+    </button>
+    <ion-title>Item</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+
+    <img item-center style="width:100; height: 100;" [src]="selectedItem?.image">
+    <h3>{{selectedItem?.name}}</h3>
+    <ion-buttons>
+      <button ion-button block icon-only (click)="selectedItem.quantity = selectedItem.quantity + 1">
+        Small
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button block icon-only (click)="selectedItem.quantity = selectedItem.quantity + 1">
+        Regular
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button block icon-only (click)="selectedItem.quantity = selectedItem.quantity + 1">
+        Large
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <p>( &pound; {{selectedItem?.price}} )</p>
+  </ion-item>
+  <p>{{selectedItem?.description}}</p>
+  <div *ngIf="selectedItem?.quantity != 0" padding>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="selectedItem.quantity = selectedItem.quantity - 1">
+        <ion-icon name="remove"></ion-icon>
+      </button>
+    </ion-buttons>
+    {{selectedItem?.quantity}} (
+    <b>{{selectedItem?.name}}</b>)
+    <p>Price = "&pound; {{selectedItem?.quantity * selectedItem?.price}} "</p>
+
+    <ion-buttons end>
+      <button ion-button block icon-only (click)="addItemInCart(selectedItem.id)">
+        Update cart
+        <ion-icon name="cart"></ion-icon>
+      </button>
+    </ion-buttons>
+  </div>
+
+</ion-content>
